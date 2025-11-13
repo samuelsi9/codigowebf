@@ -1,0 +1,74 @@
+html {
+  perspective: 1200px;
+  overflow-x: hidden;
+}
+
+body {
+  transform-style: preserve-3d;
+}
+
+.App {
+  min-height: 100vh;
+  background: #000000;
+  position: relative;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Animated background particles */
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 140, 66, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(255, 107, 53, 0.08) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  66% {
+    transform: translateY(30px) translateX(-20px);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.app-loading {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+  
+}
+
+.App:not(.app-loading) {
+  opacity: 1;
+  pointer-events: all;
+  animation: fadeInApp 0.5s ease-in-out;
+}
+
+@keyframes fadeInApp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
