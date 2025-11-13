@@ -22,7 +22,7 @@ const Chatbot = () => {
   }, [messages]);
 
   const responses = {
-    'hello': "Hello! 👋 Welcome to Codigo. We create modern mobile apps, professional websites, and AI-driven solutions. How can I help you?",
+    'hello': "Hello! 👋 Wellcome to Codigo. We create modern mobile apps, professional websites, and AI-driven solutions. How can I help you?",
     'hi': "Hi there! 🚀 What would you like to know about our services?",
     'services': "We offer:\n• Mobile Apps Development\n• Professional Websites\n• AI-Driven Apps\n• System Installation (Windows, macOS, Linux, Android)\n\nWhich one interests you?",
     'pricing': "Our pricing is custom-tailored to each project. We offer affordable prices with fast delivery and reliable support. Would you like to discuss your specific needs?",
